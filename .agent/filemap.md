@@ -29,5 +29,7 @@ This document serves as an index mapping the overall structure and purpose of th
   - **Purpose:** Implementation plan for adding the Pricing tab to the UI.
 - **`pricing_ascii.md`**
   - **Purpose:** ASCII visualization of the header changes for the Pricing tab feature.
+- **`pipeline_tutorial.txt`**
+  - **Purpose:** A simple, 6th-grade level explanation of how the GitHub Actions pipeline works, including an ASCII flow.
 
 
