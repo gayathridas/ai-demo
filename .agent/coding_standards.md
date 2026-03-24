@@ -28,5 +28,12 @@ This document outlines the coding conventions and best practices the AI Agent mu
 ## 5. Deployment & Automation
 - **Commit Messages:** Ensure commit messages explicitly state *what* changed and *why*.
 - **CI/CD Hygiene:** Ensure all local tests and builds succeed before configuring workflows for production deployments.
+- **Pre-Deployment Checklist (MUST follow every time):**
+  1. Confirm `.github/workflows/deploy.yml` exists and targets branch `main`.
+  2. Remind the user to verify **GitHub > Settings > Pages > Source = "GitHub Actions"** before the first push. This is a manual one-time step that cannot be done via code.
+  3. After pushing, verify the "Actions" tab shows a green checkmark. If it fails with `Get Pages site failed`, the Pages Source setting has not been changed.
+- **Known Pitfalls:**
+  - `Get Pages site failed`: GitHub Pages Source is still set to "Deploy from a branch". Fix: **Settings > Pages > Source > GitHub Actions**.
+  - `info: please complete authentication in your browser...`: Git needs browser OAuth. Fix: Let the user run the push manually once; subsequent pushes will be cached.
 
 *Note: These standards form the baseline for the agent context and will evolve as specific frameworks (e.g., React, TypeScript) are adopted.*

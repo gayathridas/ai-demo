@@ -15,6 +15,12 @@ When the user requests pipeline generation (e.g., `/pipeline` or `/deploy`), exe
 - Write the Action definition file (e.g., `deploy.yml`). Since this is a vanilla HTML app currently, generate a **GitHub Pages** deployment workflow spanning checkout, artifacts upload, and deployment phases.
 - Ensure the workflow respects branch targets (usually mapping to branch `main`).
 
+### 3. ⚠️ Pre-Push Verification (MANDATORY — Do Not Skip)
+Before running `git push`, always remind the user of this one-time manual step:
+> **"Before this push will deploy correctly, please go to your GitHub repository > Settings > Pages > Build and deployment > Source, and set it to 'GitHub Actions' instead of 'Deploy from a branch'. This only needs to be done once."**
+
+This is the single most common cause of deployment failure (`Get Pages site failed`). Alert the user BEFORE running the push command, not after.
+
 ### 4. Automated Deployment (Active Development)
 - Once the initial link is established:
   - Run `git add .` to stage all changes.
@@ -27,5 +33,6 @@ When the user requests pipeline generation (e.g., `/pipeline` or `/deploy`), exe
 
 ### 6. User Instructions
 - If the push fails due to authentication, ask the user to run the push manually once.
+- If deployment fails with `Get Pages site failed`, guide the user to **Settings > Pages > Source = GitHub Actions**.
 - Direct the user to the "Actions" tab on GitHub to monitor the deployment progress.
 
