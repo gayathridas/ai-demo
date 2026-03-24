@@ -6,6 +6,21 @@ description: Generate or configure the GitHub Actions CI/CD deployment pipeline
 
 When the user requests pipeline generation (e.g., `/pipeline` or `/deploy`), execute the following deployment configuration process:
 
+### 0. 📄 Mandatory Documentation (Run FIRST for Every Feature or Fix)
+Before writing any code or running any commands, always create the following two files in `docs/`:
+
+1. **Plan Doc** (`docs/<feature_name>_plan.md`):
+   - Describe the goal, what files will be changed, and why.
+   - List each specific change per file (HTML/CSS/JS).
+
+2. **ASCII Flow** (`docs/<feature_name>_ascii.md`):
+   - Show the before/after layout in ASCII art.
+   - Illustrate data flow, component relationships, or UI changes as relevant.
+
+After creating both files, update `.agent/filemap.md` to register them under the `📂 Documentation (/docs/)` section.
+
+Only proceed to Steps 1+ after these documents exist.
+
 ### 1. Requirements Gathering
 - **Read Context:** Review `.agent/agent.md` to recall the project goal (HTML deployment via GitHub Actions).
 - **Read Architecture:** Check `docs/ascii_flow.md` to ensure you understand where the compiled code resides (root directory).
