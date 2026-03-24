@@ -15,10 +15,17 @@ When the user requests pipeline generation (e.g., `/pipeline` or `/deploy`), exe
 - Write the Action definition file (e.g., `deploy.yml`). Since this is a vanilla HTML app currently, generate a **GitHub Pages** deployment workflow spanning checkout, artifacts upload, and deployment phases.
 - Ensure the workflow respects branch targets (usually mapping to branch `main`).
 
-// turbo
-### 3. Git Initialization (If needed)
-- If the repository hasn't been initialized, run `git init`, `git add .`, and `git commit -m "Initialize project"` using the `run_command` tool. 
+### 4. Automated Deployment (Active Development)
+- Once the initial link is established:
+  - Run `git add .` to stage all changes.
+  - Run `git commit -m "[Brief summary of changes]"` based on the current task.
+  - Run `git push origin main` to trigger the GitHub Actions pipeline.
 
-### 4. User Instructions
-- Provide exact instructions to the user regarding GitHub Repository Settings (e.g., navigating to **Settings > Pages > Source = GitHub Actions**).
-- Explain how to push the initial commit to their remote GitHub via CLI commands.
+// turbo
+### 5. Finalize & Push
+- If the project is already initialized and the user says "deploy" or "/pipeline", execute the add, commit, and push commands sequentially using `run_command`.
+
+### 6. User Instructions
+- If the push fails due to authentication, ask the user to run the push manually once.
+- Direct the user to the "Actions" tab on GitHub to monitor the deployment progress.
+
