@@ -36,5 +36,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    console.log("AI Nexus Frontend App InitializedSuccessfully.");
+    // Pricing section toggle
+    const pricingLink = document.querySelector('a[href="#pricing"]');
+    const pricingSection = document.getElementById('pricing');
+
+    if (pricingLink && pricingSection) {
+        pricingLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            const isVisible = pricingSection.classList.toggle('is-visible');
+            // Update active state on nav link
+            pricingLink.style.color = isVisible ? 'var(--text-primary)' : '';
+            // Smooth scroll to section when revealing
+            if (isVisible) {
+                setTimeout(() => {
+                    pricingSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 100);
+            }
+        });
+    }
+
+    console.log("AI Nexus Frontend App Initialized Successfully.");
 });
