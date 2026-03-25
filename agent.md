@@ -4,6 +4,7 @@
 - **Goal:** Build a frontend application and deploy via automated GitHub Actions pipeline.
 - **Project 1:** AI Nexus — ✅ Live (`https://github.com/gayathridas/ai-demo.git`)
 - **Project 2:** Estimate (TypeScript) — ✅ Live (`https://github.com/gayathridas/estimate.git`)
+  *(Located as a sibling folder in `/Documents/Estimate/`)*
 
 ## 📝 Mandatory Documentation Rule (Step 0)
 For every new feature or fix across any project, the agent MUST:

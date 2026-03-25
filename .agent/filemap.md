@@ -7,8 +7,8 @@ This document serves as an index mapping the overall structure and purpose of th
   - **Purpose:** The main entry point for the frontend, defining the document structure and primary UI layout.
 - **`styles.css`**
   - **Purpose:** The central stylesheet. Handles all custom CSS variables, responsive design rules, glassmorphism UI, and dark mode themes.
-- **`script.js`**
-  - **Purpose:** Client-side interactions, handling click animations and console output for the demo.
+- **`Estimate/`** (Sibling Folder)
+  - **Purpose:** Standalone Vite+TypeScript application. (Located at `../Estimate/`).
 - **`agent.md`**
   - **Purpose:** General project context, architecture, frameworks, and deployment guidelines for AI agentic workflows.
 
