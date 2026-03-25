@@ -5,6 +5,12 @@
 - **Project 1:** AI Nexus — ✅ Live (`https://github.com/gayathridas/ai-demo.git`)
 - **Project 2:** Estimate (TypeScript) — ✅ Live (`https://github.com/gayathridas/estimate.git`)
 
+## 📝 Mandatory Documentation Rule (Step 0)
+For every new feature or fix across any project, the agent MUST:
+1. Create `docs/ascii_flow.md` (Architecture/Logic Flow).
+2. Create a Plan Doc (File/Line change list).
+3. Update `.agent/filemap.md` (Registry).
+
 ## File Map Reference
 - **[File Map](.agent/filemap.md):** View the file map for a structural overview of the codebase.
 
