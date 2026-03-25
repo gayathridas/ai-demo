@@ -1,0 +1,7 @@
+# Project Isolation
+# The 'Estimate' project is a separate standalone repository.
+# Ignoring it in the root to prevent nested repository conflicts.
+Estimate/
+node_modules/
+dist/
+.env
